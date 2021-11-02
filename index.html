@@ -7,7 +7,7 @@
     <title>KJW' portfolio</title>
     <meta name="description" content="취준생의 포트폴리오입니다." />
     <meta name="author" content="KJW" />
-    <link rel="icon" type="image/png" href="img/title.png" />
+    <link rel="icon" type="img/image/png" href="img/title.png" />
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
@@ -16,8 +16,85 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <!-- 네비게이션 -->
+      <div class="nav__title">
+        <img src="img/title.png" class="nav__img" alt="" />
+        <a href="">KJW</a>
+      </div>
+      <div class="nav__bar">
+        <ul class="navbar__menu">
+          <li class="navbar__item">Home</li>
+          <li class="navbar__item">About</li>
+          <li class="navbar__item">Skills</li>
+          <li class="navbar__item">My Work</li>
+          <li class="navbar__item">Testimonial</li>
+          <li class="navbar__item">Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 인포메이션 -->
+    <section class="home">
+      <img class="home__avatar" src="img/kjw.png" alt="" />
+      <h1 class="home__title">안녕하세요,<br />저는 KJW입니다.</h1>
+      <h3 class="home__discription">
+        현재 신림에 거주중이며 취직을 준비중인 백수입니다.
+      </h3>
+      <button>CONTACT ME</button>
+    </section>
+    <!-- 어바웃 -->
+    <section class="about">
+      <h1>About me</h1>
+      <p>
+        원래는 군 부사관으로써의 안정적인 직장을 택하고 약 5년간 군에서
+        임무수행을 했습니다. <br />
+        초임에는 재미있었고 자부심을 느꼈으나 직업 특성상 자기발전의 한계를
+        느끼고 내가 가지고있는 <br />
+        지식 생각들이 어딘가에 막혀서 나아가지 못하는 느낌을 받게 되었고 새로
+        들어오는 <br />
+        병사들과 대화를 할때보면 사회와의 괴리감을 느낄때가 종종 있었습니다.
+        <br />
+        4년차때쯤에 들어온 신병중 하나가 프로그래밍을 공부중이었는데 웹사이트와
+        간단한 게임을 <br />
+        만들어내던것을 보고 매력을 느끼게되어 사회에 나와서 공부중에 있습니다.
+      </p>
+      <div class="major">
+        <div class="major__box">
+          <div class="major__icon"></div>
+          <div class="major__title">Front-end</div>
+          <div class="major__discription">
+            <i class="fab fa-html5"></i>
+            <span
+              >Html, Css, JavaScript 공부중이며 <br />
+              프레임워크는 React, vue 공부할 예정입니다.</span
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="prejob">
+        <div class="prejob__item">
+          <img src="img/army.jpg" alt="" />
+          <div>
+            <span>육군 부사관(5년 만기전역)</span>
+          </div>
+        </div>
+        <div class="prejob__item">
+          <img src="img/adstart.png" alt="" />
+          <div>
+            <span>애드스타트 광고전문회사(3개월-사원)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 스킬 -->
+    <section class="skill"></section>
+    <section class="work"></section>
+    <section class="Testimonial"></section>
+    <section class="talk"></section>
+  </body>
 </html>
