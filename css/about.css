@@ -1,0 +1,38 @@
+.major__discription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.major__icon {
+  border: 3px solid var(--color-grey);
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.prejob {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.prejob img {
+  width: 70px;
+  height: 30px;
+}
+
+.prejob__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.prejob__text span {
+  font-size: 14px;
+  color: var(--color-grey);
+  font-weight: var(--weight-semi-bold);
+}

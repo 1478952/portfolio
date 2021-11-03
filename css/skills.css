@@ -1,0 +1,35 @@
+.skills {
+  background-color: #f0e2e0;
+}
+
+.skillset {
+  display: flex;
+  justify-content: center;
+  margin: 0px 50px;
+}
+
+.skillset__left {
+  background-color: var(--color-dark-gray);
+  width: 60%;
+  height: 200px;
+}
+
+.skillset__right {
+  width: 40%;
+  height: 200px;
+}
+
+.skillset__right h3 {
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.skillset__tools {
+  background-color: #565656;
+  height: 60%;
+}
+
+.skillset__etc {
+  background-color: #706f6d;
+  height: 40%;
+}

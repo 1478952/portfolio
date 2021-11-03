@@ -1,0 +1,32 @@
+.home {
+  background: url("../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+}
+
+.home__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+}
+
+.home__title {
+  color: var(--color-grey);
+}
+
+.home__discription {
+  color: var(--color-grey);
+}
+
+.home button {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-black);
+  border-radius: 5px;
+}
