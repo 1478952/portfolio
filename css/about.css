@@ -1,3 +1,7 @@
+.major {
+  margin: 50px 0px;
+}
+
 .major__discription {
   display: flex;
   flex-direction: column;
@@ -23,6 +27,7 @@
 .prejob img {
   width: 70px;
   height: 30px;
+  margin-right: 10px;
 }
 
 .prejob__item {
@@ -35,4 +40,8 @@
   font-size: 14px;
   color: var(--color-grey);
   font-weight: var(--weight-semi-bold);
+}
+
+.major__icon:hover {
+  color: cadetblue;
 }

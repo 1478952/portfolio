@@ -1,0 +1,17 @@
+.talk {
+  background-color: #e1eaec;
+}
+
+.talk__title {
+  margin: 32px 0px;
+}
+
+.talk__link i {
+  margin: 20px 0px;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.talk__link i:hover {
+  transform: scale(1.1);
+  color: var(--color-blue);
+}
