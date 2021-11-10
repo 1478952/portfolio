@@ -19,6 +19,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__project.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -27,6 +34,10 @@
   margin: 2px;
   position: relative;
   background-color: var(--color-dark-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__image {
@@ -55,19 +66,22 @@
   transform: translateY(0px);
 }
 
-.project__discription h3,
+.project__discription h3 {
+  color: var(--color-blue);
+}
+
 .project__discription span {
-  color: white;
+  color: var(--color-dark-white);
 }
 
 .project__discription h3:after {
   content: "";
   display: block;
   position: relative;
-  left: 50%;
+  left: 20px;
   margin-left: -12px;
   margin-top: 8px;
-  width: 25px;
+  width: 180px;
   height: 2px;
   background-color: var(--color-dark-white);
 }

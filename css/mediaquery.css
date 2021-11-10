@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+  .nav__toggle-btn {
+    display: block;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #7ab4c2;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    align-items: center;
+  }
+  .nav__bar {
+    width: 100%;
+  }
+  .project {
+    width: 100%;
+  }
+  .navbar__item {
+    width: 100%;
+  }
+}

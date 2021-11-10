@@ -1,13 +1,13 @@
 nav {
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  color: var(--color-dark-grey);
+  font-weight: var(--weight-semi-bold);
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   align-items: center;
-  background-color: #7ab4c2;
-  color: white;
+  transition: all var(--animation-duration) ease-in;
   z-index: 10;
 }
 
@@ -16,6 +16,9 @@ nav {
   padding: 10px;
   border-radius: var(--size-border-radius);
   cursor: pointer;
+  border: 1px solid transparent;
+  width: 15%;
+  text-align: center;
 }
 
 .navbar__item:hover {
@@ -38,4 +41,21 @@ nav {
 .nav__img {
   width: 40px;
   height: 40px;
+}
+
+.nav__toggle-btn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-dark-grey);
+  top: 18px;
+  display: none;
+}
+
+.navbar--dark {
+  background-color: #7ab4c2;
+}
+
+.navbar__menu.open {
+  display: flex;
 }

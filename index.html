@@ -20,30 +20,36 @@
     <script src="main.js" defer></script>
   </head>
   <body>
+    <!-- 네비게이션 -->
     <nav>
-      <!-- 네비게이션 -->
       <div class="nav__title">
         <a href="#"> <img src="img/title.png" class="nav__img" alt="" /></a>
       </div>
       <div class="nav__bar">
         <ul class="navbar__menu">
-          <li class="navbar__item">Home</li>
-          <li class="navbar__item">About</li>
-          <li class="navbar__item">Skills</li>
-          <li class="navbar__item">My Work</li>
-          <li class="navbar__item">Testimonial</li>
-          <li class="navbar__item">Contact</li>
+          <li class="navbar__item" data-link=".home">Home</li>
+          <li class="navbar__item" data-link=".about">About</li>
+          <li class="navbar__item" data-link=".skills">Skills</li>
+          <li class="navbar__item" data-link=".work">My Work</li>
+          <li class="navbar__item" data-link=".testimonial">Testimonial</li>
+          <li class="navbar__item" data-link=".talk">Contact</li>
         </ul>
       </div>
+      <!-- 토글버튼 -->
+      <button class="nav__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
     <!-- 인포메이션 -->
     <section class="home">
-      <img class="home__avatar" src="img/kjw.png" alt="" />
-      <h1 class="home__title">안녕하세요,<br />저는 김정운입니다.</h1>
-      <h3 class="home__discription">
-        현재 신림에 거주중이며 취직을 준비하고 있습니다.
-      </h3>
-      <button>CONTACT ME</button>
+      <div class="home__container">
+        <img class="home__avatar" src="img/kjw.png" alt="" />
+        <h1 class="home__title">안녕하세요,<br />저는 김정운입니다.</h1>
+        <h3 class="home__discription">
+          현재 신림에 거주중이며 취직을 준비하고 있습니다.
+        </h3>
+        <button class="contactme" data-link=".talk">CONTACT ME</button>
+      </div>
     </section>
     <!-- 어바웃 -->
     <section class="about">
@@ -143,16 +149,19 @@
       <h1>My work</h1>
       <h3>projects</h3>
       <div class="work__category">
-        <button class="category__btn active">All</button>
-        <button class="category__btn">Cocoa-clone</button>
-        <button class="category__btn">Momontom</button>
-        <button class="category__btn">action-bar</button>
+        <button class="category__btn active" data-filter="*">All</button>
+        <button class="category__btn" data-filter="youtoobe">Youtoobe</button>
+        <button class="category__btn" data-filter="cocoa-clone">
+          Cocoaclone
+        </button>
+        <button class="category__btn" data-filter="momontom">Momontom</button>
       </div>
       <div class="work__project">
         <a
           href="https://1478952.github.io/youtoobe/"
           class="project"
           target="blank"
+          data-type="youtoobe"
         >
           <img
             class="project__image"
@@ -168,6 +177,7 @@
           href="https://1478952.github.io/cocoa-clone-2021/"
           class="project"
           target="blank"
+          data-type="cocoa-clone"
         >
           <img
             class="project__image"
@@ -183,6 +193,7 @@
           href="https://1478952.github.io/momontom2021/"
           class="project"
           target="blank"
+          data-type="momontom"
         >
           <img
             class="project__image"
@@ -210,5 +221,6 @@
       </div>
       <span>2021 Dream coding vision portfolio site</span>
     </section>
+    <button class="site__up"><i class="fas fa-arrow-circle-up"></i></button>
   </body>
 </html>
