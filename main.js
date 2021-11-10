@@ -22,6 +22,7 @@ navbarMenu.addEventListener('click', (event) => {
     const link = target.dataset.link;
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
+    selectNavItem(target);
 });
 
 // 토글버튼
@@ -37,11 +38,6 @@ const contactme = document.querySelector(".contactme");
 contactme.addEventListener('click', (event) => {
     scrollIntoView('.talk');
 });
-
-function scrollIntoView(selector){
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:'smooth'});
-}
 
 // 스크롤 내리면 메인 사라지는 기능
 const home = document.querySelector(".home__container");
@@ -90,3 +86,51 @@ event.target.classList.add('active');
     },300)
 });
 
+const sectionClass = ['.home', '.about', '.skills', '.work', '.testimonial', '.talk'];
+
+const sections = sectionClass.map(id => document.querySelector(id));
+const navItems = sectionClass.map(id => document.querySelector(`[data-link="${id}"]`));
+
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:'smooth'});
+    selectNavItem(navItems[sectionClass.indexOf(selector)]);
+}
+
+function selectNavItem(selected) {
+    selectedNavItem.classList.remove('active');
+    selectedNavItem = selected;
+    selectedNavItem.classList.add('active');
+}
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3,
+}
+const observerCallback = (entries, observer) =>{
+    entries.forEach(entry => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0){
+            const index = sectionClass.indexOf(`.${entry.target.className}`);
+            if(entry.boundingClientRect.y < 0) {
+                selectedNavIndex = index + 1;
+            } else {
+                selectedNavIndex = index - 1;
+            }
+        }
+    });
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('wheel', () => {
+    if(window.scrollY === 0) {
+        selectedNavIndex = 0;
+    } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {
+        selectedNavIndex = navItems.length - 1;
+    }
+    selectNavItem(navItems[selectedNavIndex]);
+});

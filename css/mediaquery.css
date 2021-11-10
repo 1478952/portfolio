@@ -22,4 +22,17 @@
   .navbar__item {
     width: 100%;
   }
+  .category__btn {
+    width: 200px;
+  }
+  .skillset {
+    flex-direction: column;
+    margin: 0;
+  }
+  .skillset__left {
+    width: 100%;
+  }
+  .skillset__right {
+    width: 100%;
+  }
 }
